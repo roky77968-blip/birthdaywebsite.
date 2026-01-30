@@ -1,36 +1,23 @@
-cake-area{
+/* Body & container */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to top, #ffc1cc, #ff99aa);
+    overflow-x:hidden;
+}
+
+/* Intro Text */
+#introText{
     text-align:center;
-    margin-top:80px;
-}
-
-#cake{
-    font-size:120px;
-    cursor:pointer;
-    user-select:none;
-}
-
-#birthdayText{
-    display:none;
-    margin-top:20px;
+    margin-top:40px;
     font-size:32px;
     color:white;
     font-weight:bold;
-    font-family: 'Love Letters', cursive; /* optional romantic font */
-    animation: fadeIn 1s ease forwards;
+    text-shadow: 2px 2px 5px #ff66aa;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:scale(.5);}
-    to{opacity:1; transform:scale(1);}
-}
-
-/* Balloon animation */
-@keyframes fly{
-    to{
-        transform:translateY(-120vh);
-        opacity:0;
-    }
-}
+/* Cake Area */
 .cake-area{
     text-align:center;
     margin-top:80px;
@@ -45,13 +32,14 @@ cake-area{
 #birthdayText{
     display:none;
     margin-top:20px;
-    font-size:32px;
+    font-size:36px;
     color:white;
     font-weight:bold;
-    font-family: 'Love Letters', cursive; /* romantic font */
+    font-family: 'Comic Sans MS', cursive;
     animation: fadeIn 1s ease forwards;
 }
 
+/* Animations */
 @keyframes fadeIn{
     from{opacity:0; transform:scale(.5);}
     to{opacity:1; transform:scale(1);}
