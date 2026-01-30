@@ -216,12 +216,15 @@ function createKisses(){
   }
 }
 
-// Cake drag slice
-cake.addEventListener('mousedown',()=>{
-  isDragging=true;
-  cakeCutStarted=true;
-  createBalloons();
-  instruction.style.display='none';
+<div class="cake-area">
+    <div id="cake">🎂</div>
+    <p id="cutText">Drag on cake to cut 🎂</p>
+
+    <h1 id="birthdayText">
+        Happy Birthday Juthi ❤️
+    </h1>
+</div>
+
 });
 document.addEventListener('mouseup',()=>{isDragging=false;});
 document.addEventListener('mousemove',(e)=>{

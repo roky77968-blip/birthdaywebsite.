@@ -1,0 +1,33 @@
+cake-area{
+    text-align:center;
+    margin-top:80px;
+}
+
+#cake{
+    font-size:120px;
+    cursor:pointer;
+    user-select:none;
+}
+
+#birthdayText{
+    display:none;
+    margin-top:20px;
+    font-size:32px;
+    color:white;
+    font-weight:bold;
+    font-family: 'Love Letters', cursive; /* optional romantic font */
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(.5);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* Balloon animation */
+@keyframes fly{
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
