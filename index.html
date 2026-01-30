@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>A Special Wish for Tonima</title>
+<style>
+/* Body style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', sans-serif;
+  background: linear-gradient(to bottom, #ffb6c1, #ff69b4);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  margin: 0;
+  padding: 0 10px;
+  line-height: 1.3;
+}
+
+/* Balloon style */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  font-size: 50px;
+  animation: floatBalloon 7s linear infinite;
+}
+
+/* Balloon animation */
+@keyframes floatBalloon {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(-50vh) rotate(10deg); opacity: 0.8; }
+  100% { transform: translateY(-100vh) rotate(-10deg); opacity: 0; }
+}
+
+/* Responsive heading for mobile */
+@media only screen and (max-width: 480px){
+  h1 {
+    font-size: 2rem;
+  }
+  .balloon {
+    font-size: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>A Special Wish for Tonima</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', sans-serif;
+  background: linear-gradient(to bottom, #ffb6c1, #ff69b4);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  margin: 0;
+  padding: 0 10px;
+  line-height: 1.3;
+}
+
+/* Balloon style */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  font-size: 50px;
+  animation: floatBalloon 7s linear infinite;
+}
+
+/* Balloon animation */
+@keyframes floatBalloon {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(-50vh) rotate(10deg); opacity: 0.8; }
+  100% { transform: translateY(-100vh) rotate(-10deg); opacity: 0; }
+}
+
+/* Button style */
+#startBtn {
+  margin-top: 40px;
+  padding: 15px 35px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #e91e63;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+#startBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive heading for mobile */
+@media only screen and (max-width: 480px){
+  h1 {
+    font-size: 2rem;
+  }
+  .balloon {
+    font-size: 35px;
+  }
+  #startBtn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>🎉 A Special Wish for Tonima 🎂🎂 🎉</h1>
+
+<!-- Balloons -->
+<div class="balloon" style="left:10%;">🎈</div>
+<div class="balloon" style="left:25%;">🎈</div>
+<div class="balloon" style="left:40%;">🎈</div>
+<div class="balloon" style="left:55%;">🎈</div>
+<div class="balloon" style="left:70%;">🎈</div>
+<div class="balloon" style="left:85%;">🎈</div>
+
+<!-- Start button -->
+<button id="startBtn" onclick="goToLetter()">Open Your Letter</button>
+
+<script>
+// Randomize balloon animation duration and delay
+const balloons = document.querySelectorAll('.balloon');
+balloons.forEach(balloon => {
+  const duration = 5 + Math.random()*5;
+  const delay = Math.random()*3;
+  balloon.style.animationDuration = duration + 's';
+  balloon.style.animationDelay = delay + 's';
+});
+
+// Go to Letter page
+function goToLetter(){
+  window.location.href = 'letter.html'; // Change if your letter page name is different
+}
+</script>
+
+</body>
+</html>

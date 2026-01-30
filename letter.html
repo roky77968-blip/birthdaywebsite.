@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter for Juthi</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #ffc0cb;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Floating hearts animation */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+@keyframes float {
+  0% { transform: translateY(100vh); opacity:1; }
+  100% { transform: translateY(-50px); opacity:0; }
+}
+
+/* Envelope container */
+.envelope-container {
+  font-size: 100px;
+  cursor: pointer;
+  margin: 80px auto;
+}
+
+/* Letter content */
+#letterContent {
+  width: 280px;
+  margin: -50px auto 0;
+  background: #fff;
+  color: #e91e63;
+  border-radius: 12px;
+  padding: 20px;
+  display: none;
+  text-align: left;
+  white-space: pre-line;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 1s ease-out;
+  font-size: 1.1em;
+}
+
+#letterContent.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Next button */
+#nextBtn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #fff;
+  color: #e91e63;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<h1>💌 A Special Letter for Juthi</h1>
+<p>Click the envelope to open your letter!</p>
+
+<div class="envelope-container" onclick="openLetter()">
+  💌
+</div>
+
+<div id="letterContent"></div>
+<button id="nextBtn" onclick="nextPage()">Next</button>
+
+<script>
+// Floating hearts animation
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = ["💖","💕","❤️"][Math.floor(Math.random()*3)];
+  heart.style.left = Math.random()*100 + "%";
+  heart.style.fontSize = (15+Math.random()*25) + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 400);
+
+// Letter text
+const letterText = `Dear Juthi,
+Today marks another year of your incredible existence, and I couldn't be more grateful to celebrate it with you. You bring so much joy, laughter, and love into this world. You deserve all the magic, all the dreams, and all the love this world has to offer. 💕💖❤️`;
+
+// Open letter animation
+function openLetter(){
+  const letter = document.getElementById('letterContent');
+  letter.style.display = 'block';
+  setTimeout(()=>{
+    letter.classList.add('show');
+    typeLetter(letterText, letter, 0);
+  }, 300); // small delay for effect
+}
+
+// Typing animation
+function typeLetter(text, element, index){
+  if(index < text.length){
+    element.innerHTML += text.charAt(index);
+    setTimeout(()=>typeLetter(text, element, index+1), 30);
+  } else {
+    document.getElementById('nextBtn').style.display = 'inline-block';
+  }
+}
+
+// Next page
+function nextPage(){
+  window.location.href = 'memory.html';
+}
+</script>
+
+</body>
+</html>
