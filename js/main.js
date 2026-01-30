@@ -1,11 +1,11 @@
-<script>
+// Cake Cutting + Balloon + Happy Birthday
 let cake = document.getElementById("cake");
 let message = document.getElementById("birthdayText");
 
 let startX = 0;
 let cutDone = false;
 
-// Touch / Mouse support
+// Mouse drag
 cake.addEventListener("mousedown", e => startX = e.clientX);
 cake.addEventListener("mouseup", e => {
     let endX = e.clientX;
@@ -16,6 +16,7 @@ cake.addEventListener("mouseup", e => {
     }
 });
 
+// Touch drag for mobile
 cake.addEventListener("touchstart", e => startX = e.touches[0].clientX);
 cake.addEventListener("touchend", e => {
     let endX = e.changedTouches[0].clientX;
@@ -37,8 +38,6 @@ function launchBalloons(){
         b.style.fontSize="30px";
         b.style.animation="fly 4s linear forwards";
         document.body.appendChild(b);
-
         setTimeout(()=>b.remove(),4000);
     }
 }
-</script>
